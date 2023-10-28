@@ -81,6 +81,11 @@
           },
           body: JSON.stringify(postData),
         });
+        if (response.ok) {
+          console.log('Data posted to Firebase successfully.');
+        } else {
+          console.error('Failed to post data to Firebase.');
+        }
       } catch (error) {
         console.error('Error:', error);
       }
